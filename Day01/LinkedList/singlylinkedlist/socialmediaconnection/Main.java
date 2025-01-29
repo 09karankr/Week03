@@ -1,0 +1,29 @@
+package singlylinkedlist.socialmediaconnection;
+
+public class Main {
+    public static void main(String[] args) {
+        SocialMediaSystem system = new SocialMediaSystem();
+
+        // Add users
+        system.addUser(1, "Karan", 25);
+        system.addUser(2, "Ashish", 28);
+        system.addUser(3, "Priyanshu", 22);
+
+        // Add friends
+        system.addFriend(1, 2);
+        system.addFriend(1, 3);
+        system.addFriend(2, 3);
+
+        // Display friends
+        system.displayFriends(1);
+        system.displayFriends(2);
+
+        // Find mutual friends
+        system.findMutualFriend(1, 2);
+
+        // Remove a friend connection
+
+        // Count friends
+        system.countFriends(1);
+    }
+}
