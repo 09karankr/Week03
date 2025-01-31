@@ -11,16 +11,7 @@ public class OnlineStockSpan {
         this.list = new ArrayList<>();
     }
 
-    public int next(int price) {
-        list.add(price);
-        int count = 0;
-        for (int i = list.size() - 1; i >= 0; i--) {
-            if (list.get(i) > price)
-                break;
-            count++;
-        }
-        return count;
-    }
+
 
     public int[] calculateSpans(int[] prices) {
 
@@ -34,7 +25,7 @@ public class OnlineStockSpan {
 
         for (int i = 1; i < prices.length; i++) {
             while (!indexStack.isEmpty()
-                    && prices[indexStack.peek()] < prices[i])
+                    && prices[indexStack.peek()] <= prices[i])
                 indexStack.pop();
 
             // If index stack is empty, the price at index 'i'
