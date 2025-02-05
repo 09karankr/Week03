@@ -7,7 +7,7 @@ import java.io.IOException;
 public class WordCount {
     public static void main(String[] args) {
         String filename = "D:\\example.txt";
-        String targetWord = "and";   // Change to the word you want to search for
+        String targetWord = "and";
         int wordCount = 0;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
